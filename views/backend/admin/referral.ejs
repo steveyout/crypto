@@ -1,0 +1,77 @@
+<% include ../../partials/head %>
+<script src="/js/vendor.min.js"></script>
+<title><%= settings.siteName %> - <%= userDetails.name %>'s Profile</title>
+</head>
+<body class="vertical-layout vertical-content-menu 2-columns menu-expanded fixed-navbar"
+      data-open="click" data-menu="vertical-content-menu" data-col="2-columns">
+<div id="app-root">
+  <% include ../../partials/header %>
+  <div class="app-content content">
+    <div class="content-wrapper">
+      <div class="content-header row">
+      </div>
+      <% include ../../partials/sidebar %>
+      <div class="content-body">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">
+              Referrals
+            </h3>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>User</th>
+                  <th>Referer</th>
+                  <th>Date of Referral</th>
+                  <th>Commission</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% referrals.forEach(function(referral) { %>
+                <tr>
+                  <td><%= referral.User.name %></td>
+                  <td><%= referral.Referral.name %></td>
+                  <td><%= referral.createdAt.getDate()+' '+monthNames[referral.createdAt.getMonth()]+' '+referral.createdAt.getFullYear() %></td>
+                  <td>&dollar; <%= referral.commission %></td>
+                </tr>
+                <% }) %>
+                </tbody>
+              </table>
+            </div>
+            <% if (pages > 0) { %>
+            <ul class="pagination justify-content-center pagination-separate pagination-curved">
+              <% if (current == 1) { %>
+              <li class="page-item disabled"><a class="page-link">First</a></li>
+              <% } else { %>
+              <li class="page-item"><a class="page-link" href="/referrals?page=1">First</a></li>
+              <% } %>
+              <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+              <% for (; i <= (Number(current) + 4) && i <= pages; i++) { %>
+              <% if (i == current) { %>
+              <li class="page-item active"><a class="page-link"><%= i %></a></li>
+              <% } else { %>
+              <li class="page-item"><a class="page-link" href="/referrals?page=<%= i %>"><%= i %></a></li>
+              <% } %>
+              <% } %>
+              <% if (current == pages) { %>
+              <li class="page-item disabled"><a class="page-link">Last</a></li>
+              <% } else { %>
+              <li class="page-item"><a class="page-link" href="/referrals?page=<%= pages %>">Last</a></li>
+              <% } %>
+            </ul>
+            <% } %>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% include ../../partials/footer %>
+<script src="/js/vendor.min.js"></script>
+<script src="/js/main-bundle.min.js"></script>
+</body>
+</html>

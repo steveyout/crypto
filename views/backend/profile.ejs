@@ -1,0 +1,270 @@
+<% include ../partials/head %>
+<link rel="stylesheet" href="/css/chart.css">
+<title><%= settings.siteName %> - Dashboard</title>
+</head>
+<body class="vertical-layout vertical-content-menu 2-columns   menu-expanded fixed-navbar"
+      data-open="click" data-menu="vertical-content-menu" data-col="2-columns">
+<div id="app-root">
+  <% include ../partials/header %>
+  <div class="app-content content">
+    <div class="content-wrapper">
+      <div class="content-header row">
+      </div>
+      <% include ../partials/sidebar %>
+      <div class="content-body">
+        <% if(!isAdmin) { %>
+        <div class="row">
+          <div class="col-xl-6 col-12" id="ecommerceChartView">
+            <div class="card card-shadow">
+              <div class="card-header card-header-transparent py-20">
+                <span href="#" class="text-body blue-grey-700">START EARNING</span>
+                <a class="btn btn-danger box-shadow-1 round btn-min-width pull-right"
+                   href="/packages">Start Transaction</a>
+              </div>
+              <div class="bg-white" style="margin-top: -8px">
+                <div class="ct-chart scoreLineShadow" id="scoreLineToDay"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-6 col-12">
+            <div class="row">
+              <div class="col-lg-6 col-12">
+                <div class="card pull-up">
+                  <div class="card-header bg-hexagons">
+                    <h4 class="card-title">Hit Rate
+                      <span class="danger">-12%</span>
+                    </h4>
+                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+
+                  </div>
+                  <div class="card-content collapse show bg-hexagons">
+                    <div class="card-body pt-0">
+                      <div class="">
+                        <canvas id="hit-rate-doughnut" height="275"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-12">
+                <div class="card pull-up">
+                  <div class="card-content collapse show bg-gradient-directional-danger ">
+                    <div class="card-body bg-hexagons-danger">
+                      <h4 class="card-title white">Deals
+                        <span class="white">-55%</span>
+                        <span class="float-right">
+                          <span class="white">152</span>
+                          <span class="red lighten-4">/200</span>
+                        </span>
+                      </h4>
+                      <div class="">
+                        <canvas id="deals-doughnut" height="275"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-12">
+                <div class="card pull-up">
+                  <div class="card-content">
+                    <div class="card-body">
+                      <div class="media d-flex">
+                        <div class="media-body text-left">
+                          <h6 class="text-muted">Referral Bonus</h6>
+                          <h3><%= wallet.referralBonus %> BTC</h3>
+                        </div>
+                        <div class="align-self-center">
+                          <i class="icon-trophy success font-large-2 float-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-12">
+                <div class="card pull-up">
+                  <div class="card-content">
+                    <div class="card-body">
+                      <div class="media d-flex">
+                        <div class="media-body text-left">
+                          <h6 class="text-muted">Completed Transactions</h6>
+                          <h3><%= wallet.completedTransactions %></h3>
+                        </div>
+                        <div class="align-self-center">
+                          <i class="icon-check danger font-large-2 float-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-3">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Transactions</h4>
+              </div>
+              <div class="card-content collapse show">
+                <div class="card-body pt-0">
+                  <p>Completed
+                    <span class="float-right text-bold-600"><%= Math.floor((wallet.completedTransactions / wallet.totalTransactions) * 100) %> %</span>
+                  </p>
+                  <div class="progress progress-sm mt-1 mb-0 box-shadow-1">
+                    <div class="progress-bar bg-gradient-x-danger" role="progressbar" style="width: <%= Math.floor((wallet.completedTransactions / wallet.totalTransactions) * 100) %>%"
+                         aria-valuenow="<%= Math.floor((wallet.completedTransactions / wallet.totalTransactions) * 100) %>" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <p class="pt-1">Ongoing
+                    <span class="float-right text-bold-600"><%= Math.floor((wallet.ongoingTransactions / wallet.totalTransactions) * 100) %> %</span>
+                  </p>
+                  <div class="progress progress-sm mt-1 mb-0 box-shadow-1">
+                    <div class="progress-bar bg-gradient-x-success" role="progressbar" style="width: <%= Math.floor((wallet.ongoingTransactions / wallet.totalTransactions) * 100) %>%"
+                         aria-valuenow="<%= Math.floor((wallet.ongoingTransactions / wallet.totalTransactions) * 100) %>" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Statistics</h4>
+              </div>
+              <div class="card-content collapse show">
+                <div class="card-body p-0">
+                  <div class="table-responsive">
+                    <table class="table mb-0">
+                      <tbody>
+                      <tr>
+                        <th scope="row" class="border-top-0">Completed</th>
+                        <td class="border-top-0"><%= wallet.completedTransactions %></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Ongoing</th>
+                        <td><%= wallet.ongoingTransactions %></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Total</th>
+                        <td><%= wallet.totalTransactions %></td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title text-center">Average Deal Size</h4>
+              </div>
+              <div class="card-content collapse show">
+                <div class="card-body pt-0">
+                  <div class="row">
+                    <div class="col-md-6 col-12 border-right-blue-grey border-right-lighten-5 text-center">
+                      <h6 class="danger text-bold-600">Invested</h6>
+                      <h4 class="font-large-1 text-bold-400"><%= wallet.totalDeposit %> BTC</h4>
+                    </div>
+                    <div class="col-md-6 col-12 text-center">
+                      <h6 class="success text-bold-600">Profit</h6>
+                      <h4 class="font-large-1 text-bold-400"><%= wallet.balance %> BTC</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <stat-transaction></stat-transaction>
+        <% } %>
+        <% if(isAdmin) { %>
+        <div class="row">
+          <div class="col-xl-3 col-lg-6 col-12">
+            <div class="card pull-up">
+              <div class="card-content">
+                <div class="card-body">
+                  <div class="media d-flex">
+                    <div class="media-body text-left">
+                      <h6 class="text-muted">Users</h6>
+                      <h3><%= stat.userCount %></h3>
+                    </div>
+                    <div class="align-self-center">
+                      <i class="icon-users success font-large-2 float-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6 col-12">
+            <div class="card pull-up">
+              <div class="card-content">
+                <div class="card-body">
+                  <div class="media d-flex">
+                    <div class="media-body text-left">
+                      <h6 class="text-muted">Transactions<br></h6>
+                      <h3><%= stat.totalTransactions %></h3>
+                    </div>
+                    <div class="align-self-center">
+                      <i class="ft-trending-up info font-large-2 float-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6 col-12">
+            <div class="card pull-up">
+              <div class="card-content">
+                <div class="card-body">
+                  <div class="media d-flex">
+                    <div class="media-body text-left">
+                      <h6 class="text-muted">Ongoing Transactions</h6>
+                      <h3><%= stat.ongoingTransactions %></h3>
+                    </div>
+                    <div class="align-self-center">
+                      <i class="icon-hourglass warning font-large-2 float-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6 col-12">
+            <div class="card pull-up">
+              <div class="card-content">
+                <div class="card-body">
+                  <div class="media d-flex">
+                    <div class="media-body text-left">
+                      <h6 class="text-muted">Completed Transactions</h6>
+                      <h3><%= stat.completedTransactions %></h3>
+                    </div>
+                    <div class="align-self-center">
+                      <i class="icon-check danger font-large-2 float-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>
+<% include ../partials/footer %>
+<script src="/js/vendor.min.js"></script>
+<script src="/js/main-bundle.min.js"></script>
+<script src="/js/chart.min.js"></script>
+<script src="https://rawgit.com/gionkunz/chartist-js/develop/dist/chartist.min.js"></script>
+<script src="https://rawgit.com/Globegitter/chartist-plugin-tooltip/master/dist/chartist-plugin-tooltip.min.js"></script>
+<script src="/js/dashboard.min.js"></script>
+</body>
+</html>

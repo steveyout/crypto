@@ -1,0 +1,801 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="<%= settings.siteDescription %>">
+  <meta name="keywords" content="cryptocurrency, trade, mine, buy, bitcoin, sell">
+  <meta name="author" content="<%= settings.siteOwner %>">
+  <meta name="current_user" content="<%= (userDetails.id)?userDetails.id:'' %>">
+  <meta name="msapplication-TileColor" content="#f7f7f7">
+  <meta name="theme-color" content="#f7f7f7">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#f7f7f7">
+  <meta name="robot" content="index,follow">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="1 days">
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="/css/glyphs.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  <!--elegant icon font -->
+  <link rel="stylesheet" href="/css/elegant-icons.css">
+  <!--Animate -->
+  <link rel="stylesheet" href="/css/animate.css">
+
+  <!-- Owl-carousel-->
+  <link rel="stylesheet" href="/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+
+
+  <!-- Magnific Popup-->
+  <link rel="stylesheet" href="/css/magnific-popup.css">
+
+  <!--Template Stylesheets css-->
+
+  <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <script src="/js/modernizr.js"></script>
+
+
+  <!--[if lt IE 9]>
+  <script src="/js/html5shiv.min.js"></script>
+  <script src="/js/respond.min.js"></script>
+  <![endif]-->
+  <title><%= settings.siteName %> - Trading and mining at ease. </title>
+</head>
+<body data-spy="scroll" data-target=".navbar-default" data-offset="100">
+<% include ./partials/anonymouseHeader %>
+<section id="home" class="section-hero bg-color-1 hero-banner">
+
+
+  <div class="section-hero-inner">
+    <div class="section-hero-content clearfix">
+      <div class="particles" id="particles"></div>
+      <div class="content-col-left ">
+
+        <div class="content-col-inner ">
+          <div class="hero-text ">
+            <h1>Grow Your Financial Stability </h1>
+            <p>Trade in the world's financial markets, with a simple and user friendly online platform. </p>
+            <a href="/signin" class="btn btn-white btn-ripple"> Get started</a>
+          </div>
+
+          <div class="arrow-down-btn hide-mb">
+            <a href="#about " class="section-scroll scroll-btn-top">
+              <i class="arrow_down "></i>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="content-col-right ">
+
+        <div class="content-col-image ">
+          <figure class="image ">
+            <img src="/images/home-hero.png" alt="" class="banner-image">
+          </figure>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!--container-->
+</section>
+
+<section id="about" class="section-padd">
+
+  <!--container-->
+
+  <div class="container ">
+    <div class="row ">
+
+      <div class="row-centered ">
+
+        <div class="col-centered col-md-6 col-xs-12 ">
+
+          <div class="about-text text-center ">
+
+            <h2>Welcome to Flash-Connect</h2>
+
+            <p class="mg-bt-30 ">
+              Flash-Connect is a group of finance geek, designers, and software engineers on a mission to change the way the world sees cryptocurrency investing.
+            </p>
+
+            <a href="/signin" class="btn btn-color mg-bt-20">Get Started</a>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="features-warpper pd-tp-50 clearfix ">
+
+        <!--feature block-->
+        <div class="col-md-4 col-sm-4 col-xs-12 wow bounceInRight" data-wow-duration="0.99s">
+
+          <div class="feature-block ">
+
+            <img src="/images/list.svg " alt="">
+            <h3>Pro Team</h3>
+            <p>
+              With a world class team, we guarantee the best pips and strategy and ensure all our innovations are veteran controlled.
+            </p>
+
+          </div>
+
+        </div>
+
+        <!--feature block-->
+        <div class="col-md-4 col-sm-4 col-xs-12  wow bounceInRight" data-wow-duration="1s">
+
+          <div class="feature-block ">
+
+            <img src="/images/chat.svg " alt="">
+            <h3>Minimal Risk</h3>
+            <p>
+              With the expertise and experience of our risk management team as well as our automated softwares, we guarantee the minimal risk ever!
+            </p>
+
+          </div>
+        </div>
+
+        <!--feature block-->
+        <div class="col-md-4 col-sm-4 col-xs-12  wow bounceInRight" data-wow-duration="0.5s">
+
+          <div class="feature-block ">
+
+            <img src="/images/checked.svg " alt="">
+            <h3>No Limits!</h3>
+            <p>
+              Our packages happen to be for all Wallet Sizes. Also, all our Clients happen to have &dollar; 5 bitcoin equivalence Bonus on Referrals.
+            </p>
+
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+    <!--container-->
+  </div>
+</section>
+
+<!--Featrues app-->
+
+
+
+<section id="packages" class="section-padd">
+
+
+  <!--container-->
+
+  <div class="container wow fadeInUp">
+    <div class="row ">
+
+      <div class="row-centered ">
+
+        <div class="col-centered col-md-6 col-xs-12 ">
+
+          <div class="about-text text-center ">
+
+            <h2>Packages</h2>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="table-price text-center clearfix mg-tp-60 ">
+
+        <!--table price-->
+
+
+        <div class="col-xs-12 col-sm-4 ">
+          <div class="table-inner ">
+
+            <div class="table-plan text-center ">
+              <i class="icon-shield"></i>
+              <h3>Basic</h3>
+            </div>
+
+            <div class="content-plan">
+
+
+              <div class="price-content ">
+
+                <strong>3</strong>
+                <sup> %</sup>
+                <sub>/day</sub>
+              </div>
+              <div class="price-content-btn ">
+                <a href="/packages" class="btn btn-color ">Select</a>
+              </div>
+
+              <ul>
+                <li>0.1 BTC - 0.5 BTC</li>
+                <li>Contract Duration - 30 days</li>
+                <li>3% daily</li>
+              </ul>
+
+            </div>
+
+
+          </div>
+        </div>
+
+        <!--table price-->
+
+        <!--table price-->
+
+
+        <div class="col-xs-12 col-sm-4 active ">
+          <div class="table-inner ">
+
+            <div class="table-plan text-center ">
+              <i class="icon-shield "></i>
+              <h3>Standard</h3>
+            </div>
+
+            <div class="content-plan ">
+              <div class="price-content ">
+
+                <strong>5</strong>
+                <sup> %</sup>
+                <sub>/day</sub>
+              </div>
+              <div class="price-content-btn ">
+                <a href="/packages" class="btn btn-color ">Select</a>
+              </div>
+
+              <ul>
+                <li>0.6 BTC to 0.9 BTC</li>
+                <li>Contract Duration - 30 days</li>
+                <li>5% daily</li>
+              </ul>
+
+
+            </div>
+
+
+          </div>
+        </div>
+
+        <!--table price-->
+        <!--table price-->
+        <div class="col-xs-12 col-sm-4 ">
+          <div class="table-inner ">
+
+            <div class="table-plan text-center ">
+              <i class="icon-shield "></i>
+              <h3>Professional</h3>
+            </div>
+
+            <div class="content-plan ">
+              <div class="price-content ">
+
+                <strong>8</strong>
+                <sup> %</sup>
+                <sub>/day</sub>
+              </div>
+              <div class="price-content-btn ">
+                <a href="/packages" class="btn btn-color ">Select</a>
+              </div>
+
+              <ul>
+                <li>1 BTC to 9 BTC</li>
+                <li>Contract Duration - 30 days</li>
+                <li>8% daily</li>
+              </ul>
+
+            </div>
+
+
+          </div>
+        </div>
+        <!--table price-->
+
+      </div>
+    </div>
+
+    <!--container-->
+
+  </div>
+
+</section>
+
+<section id="features" class="pd-tp-80">
+
+  <div class="feature-inner-right clearfix ">
+    <div class="feature-col-left ">
+      <div class="feature-col-inner ">
+        <div class="text-content ">
+          <h2>More about Crypto - currencies?</h2>
+
+          <p>
+            Flash-Connect supports Bitcoin. Bitcoin is a decentralized digital currency that enables instant payments to anyone, anywhere in the world. Bitcoin uses peer - to - peer technology to operate with no central authority. Transaction management and money insurance are carried out collectively by the network.
+          </p>
+
+          <ul class="list-block ">
+
+            <li>Bitcoin Value has multiplied 879,999 times from 2010 to 2017 and still multiplying.</li>
+            <li>There are only 21 million Bitcoins in the world and the limit is expected to expire by 2140.</li>
+            <li>Bitcoin has surged up to 184% only in 2017.</li>
+          </ul>
+
+          <a href="https://en.bitcoin.it/wiki/Bitcoin" class="btn btn-color ">Learn More</a>
+        </div>
+
+      </div>
+    </div>
+    <div class="feature-col-right ">
+      <div class="col-image-inner ">
+        <a href='https://www.youtube.com/embed/Um63OQz3bjo' class='play-btn video-modal playBut'>
+          <svg version="1.1"
+               xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+               x="0px" y="0px" width="113.7px" height="113.7px" viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7"
+               xml:space="preserve" class="img-responsive">
+
+          <polygon class='triangle' id="XMLID_18_" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+          73.5,62.5 148.5,105.8 73.5,149.1 "/>
+
+            <circle class='circle' id="XMLID_17_" fill="none"  stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3"/>
+          </svg> </a>
+        <figure>
+          <img src="/images/vid_bg.jpg" alt="">
+        </figure>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<section id="faqs" class="pd-tp-60">
+
+  <div class="feature-inner-right clearfix ">
+    <div class="feature-col-left ">
+      <div class="col-image-inner ">
+        <figure>
+          <img src="/images/home-testimony.png" alt="">
+        </figure>
+      </div>
+
+    </div>
+    <div class="feature-col-right ">
+      <div class="feature-col-inner ">
+        <div class="text-content ">
+          <h2>FAQs</h2>
+
+          <p>
+            Click the link below to view Frequently Asked Questions and answers. Feel free to chat with our Online Support Channel or E-mail us at <a href="mailto:info@flash-connect.com" id="faqLink" target="_top">info@flash-connect.com</a>.
+          </p>
+
+          <a href="#" class="btn btn-color " data-toggle="modal" data-target="#faq-modal">View FAQs</a>
+          <br><br>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<% if(testimonies && testimonies.length){ %>
+<section id="reviews" class="testimonial-block ">
+
+  <div class=" clearfix ">
+    <div class="col-image ">
+      <div class="col-image-inner ">
+        <figure>
+
+        </figure>
+      </div>
+
+    </div>
+    <div class="text-col ">
+      <div class="text-col-inner ">
+
+        <div class="quote ">
+          <img src="/images/quote.svg " alt="">
+
+        </div>
+        <div class="testimonial-caroussel pd-bt-80 mg-tp-60 ">
+
+          <% testimonies.forEach(function(testimony){ %>
+          <div class="item ">
+
+            <div class="testimonial-item ">
+
+              <div class="bottom-text-item ">
+
+                <p>
+                  <%= testimony.message %>
+                </p>
+                <h3><%= testimony.User.name %></h3>
+              </div>
+            </div>
+          </div>
+          <% })%>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+</section>
+<% } %>
+
+<!--Footer -->
+
+<footer class="footer ">
+  <div class="footer-warpper ">
+    <div class="container ">
+      <div class="row ">
+
+        <div class="footer-top  clearfix ">
+
+
+
+
+          <div class="footer-top-content clearfix ">
+            <div class="col-md-6 col-xs-12 col-sm-6 ">
+
+              <h1> Start your earning today.</h1>
+
+            </div>
+
+            <div class="col-md-6 col-xs-12 col-sm-6 ">
+              <!-- Newsletter -->
+
+
+
+              <div class="newsletter-block ">
+
+
+                <div class="subscribe-form ">
+
+                  <form action="" method="post" class="subscribe-mail " id="triggerMail">
+                    <div class="form-group ">
+                      <input type="email " class="form-control email-input " placeholder="" readonly>
+                      <input type="submit" id="triggerMail" class="btn btn-subscribe bg-color-1 " value="Message ">
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- Newsletter -->
+            </div>
+
+          </div>
+
+          <div class="footer-bottom-content clearfix ">
+
+            <!--Footer Column 1-->
+
+            <div class="col-md-6 col-sm-12 col-xs-12 ">
+
+              <div class="row ">
+
+                <div class="col-md-7 col-sm-6 col-xs-12 ">
+
+                  <div class="logo-footer ">
+                    <img src="/images/logo/logo-dark.png " alt="">
+
+                  </div>
+                  <div class="text-footer ">
+                    <p>
+                      <%= settings.siteDescription %>
+                    </p>
+                  </div>
+
+
+                  <ul class="list-social list-inline ">
+                    <li>
+                      <a href="//<%= settings.facebookUri %>" target="_blank " class="btn btn-circle btn-facebook ">
+                        <i class="social_facebook "></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="//<%= settings.twitterUri %>" target="_blank " class="btn btn-circle btn-twitter ">
+                        <i class="social_twitter "></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="//<%= settings.googleUri %>" target="_blank " class="btn btn-circle btn-google-plus ">
+                        <i class="social_googleplus "></i>
+                      </a>
+                    </li>
+
+                  </ul>
+                </div>
+
+
+                <div class="col-md-5 col-sm-6 col-xs-12 ">
+
+                  <h5>Quick Links</h5>
+
+                  <ul class="list-menu ">
+
+
+                    <li>
+                      <a href="#about">About </a>
+                    </li>
+
+                    <li>
+                      <a href="#packages">Packages</a>
+                    </li>
+
+                    <li>
+                      <a href="#reviews">Testimonials</a>
+                    </li>
+
+                  </ul>
+
+
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!--End Footer Column 1-->
+
+
+            <!--Footer Column 2-->
+
+
+            <div class="col-md-6 col-sm-12 col-xs-12 ">
+
+              <div class="row clearfix">
+
+                <div class="col-md-5 col-sm-6 col-xs-12 float-right">
+
+                  <h5>Other links </h5>
+
+                  <ul class="list-menu ">
+
+                    <li>
+                      <a href="#"data-toggle="modal" data-target="#terms-modal" >Terms</a>
+                    </li>
+
+                    <li>
+                      <a href="#" data-toggle="modal" data-target="#terms-modal">Privacy </a>
+                    </li>
+
+                    <li>
+                      <a data-scroll="" href="#faqs" class="section-scroll">FAQs</a>
+                    </li>
+                  </ul>
+
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!--Footer Column 2-->
+
+
+          </div>
+
+          <div class="footer-bottom ">
+            <div class="copyright ">
+              <p><%= year %> &copy; Copyright <%= settings.siteName %> All rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</footer>
+<!--Footer -->
+
+<div class="modal fade connect-modal" id="faq-modal" tabindex="-1" role="dialog" aria-labelledby="faqModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>FAQs</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body clearfix">
+        <p>
+        <h5>What is Flash-Connect?</h5>
+        <p><%= settings.siteDescription %></p>
+        </p><br>
+        <p>
+        <h5>How to start a transaction?</h5>
+        <p>All you need to do is simply deposit to your account and select any package of choice and comlete the process to initiate a transaction.</p>
+        </p><br>
+        <p>
+        <h5>What happens to my deposit?</h5>
+        <p>Your deposit will be kept in your wallet untouched, until you decide either to withdraw it or start a transaction with it.</p>
+        </p><br>
+        <p>
+        <h5>How long does it take for a transaction to be completed?</h5>
+        <p>Every transaction have a duration of 30 days.</p>
+        </p><br>
+        <p>
+        <h5>Why have i not gotten my referral bonus</h5>
+        <p>Your referral bonus will only be credited when the user you refer initiates a transaction.</p>
+        </p><br>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade connect-modal" id="terms-modal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Terms and Condition</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body clearfix">
+        <p>
+        <h5>TERMS OF SERVICE AND USE</h5>
+        <p>
+          This Website and its related services are owned and operated by Flash-Connect. You acknowledge that any use of this Website and any use of our Services, is subject to these Terms of Service and Use (‘Terms’).
+        </p>
+        </p><br>
+        <p>
+        <h5>1. GENERAL</h5>
+        <p>
+          1.1. We reserve the right to change these Terms at any time, in our sole discretion. Any such changes in respect of your use of the Services will take effect when posted on the Website. If you have supplied us with an email address, we will also notify you by email of changes to these Terms.<br><br>1.2. It is your responsibility to read the Terms carefully on each occasion you use the Services. Your continued use of the Services shall signify your acceptance to be bound by the current Terms.<br><br>1.3. Failure or delay by Flash-Connect in enforcing or partially enforcing any provision of these Terms shall not be construed as a waiver of any rights.
+        </p>
+        </p><br>
+        <p>
+        <h5>2. DEFINITIONS</h5>
+        <p>
+          2.1. All references to the ‘company,’ ‘us,’ ‘our,’ ‘we’ means Flash-Connect.
+          <br><br>2.2. All references to ‘you,’ ‘your,’ or the ‘user’ mean the person or persons, using the Website and/or using the Services via the Website.
+          <br><br>2.3. All references to the ‘Website’ shall include reference to all URL’s operated by Flash-Connect.
+          <br><br>2.4. ‘Virtual Currency’ means Bitcoin or any other Flash-Connect-based currency.
+          <br><br>2.5. ‘Services’ means any feature provided by us via the Website or any local application (mobile, desktop or otherwise).
+          <br><br>2.6. ‘Communication’ includes communication by email or Flash-Connect-support chat.<br><br>2.7. ‘Force Majeure Event’ means any event beyond Flash-Connect’s reasonable control, including, but not limited to, flood, extraordinary weather conditions, earthquake, or other act of God, fire, war, insurrection, riot, labor dispute, accident, action of government, communications, power failure, or equipment or software malfunction.
+        </p>
+        </p><br>
+        <p>
+        <h5>3. ELIGIBILITY</h5>
+        <p>
+          3.1. You hereby accept and acknowledge that you: (a) Are of legal age to agree to these Terms; (b) Have not previously been suspended or removed from using our Services.
+          <br><br>3.2. If you are using the Services on behalf of a legal entity, you further represent and warrant that: (i) The legal entity is duly organized and validly existing under the applicable laws of the jurisdiction of its organization, and (ii) You are duly authorized by such legal entity to act on its behalf.
+        </p>
+        </p><br>
+        <p>
+        <h5>4. PRIVACY POLICY & SECURITY</h5>
+        <p>
+          4.1. We endeavour to take all reasonable steps to protect your personal information. However, we cannot guarantee the security of any data you disclose online. You accept the inherent security risks of providing information and dealing online over the Internet and will not hold us responsible for any breach of security unless this is due to our negligence.
+        </p>
+        </p><br>
+        <p>
+        <h5>5.  ASSUMPTION OF RISK, LIMITATIONS ON LIABILITY & INDEMNITY</h5>
+        <p>
+          5.1. You accept and acknowledge that there are risks associated with utilizing an Internet-based Virtual Currency wallet service including, but not limited to, the risk of failure of hardware, software and Internet connections, the risk of malicious software introduction, and the risk that third parties may obtain unauthorized access to information stored within your Profile. You accept and acknowledge that Flash-Connect will not be responsible for any communication failures, disruptions, errors, distortions or delays you may experience when using the Services, however caused.
+          <br><br>5.2. You accept and acknowledge that there are risks associated with utilizing any Virtual Currency network, including, but not limited to, the risk of unknown vulnerabilities in or unanticipated changes to the network protocol. You acknowledge and accept that Flash-Connect has no control over any cryptocurrency network and will not be responsible for any harm occurring as a result of such risks.
+          <br><br>5.3. We will use reasonable endeavours to verify the accuracy of any information on the Website but we make no representation or warranty of any kind, express or implied, statutory or otherwise, regarding the contents of the Website, information and functions made accessible through the Website, any hyperlinks to third party websites, or the security associated with the transmission of information through the Website or any website linked to by the Website.
+          <br><br>5.4. We will not be responsible or liable to you for any loss and take no responsibility for and will not be liable to you for any use of our Services, including but not limited to any losses, damages or claims arising from: (a) User error such as forgotten passwords, incorrectly constructed transactions, or mistyped Virtual Currency addresses; (b) Server failure or data loss; (c) Unauthorized access to applications; (d) Any unauthorized third party activities, including without limitation the use of viruses, phishing, brute forcing or other means of attack against the Website or Services.
+          <br><br>5.5. We make no warranty that the Website or the server that makes it available, are free of viruses or errors, that its content is accurate, that it will be uninterrupted, or that defects will be corrected. We will not be responsible or liable to you for any loss of any kind, from action taken, or taken in reliance on material, or information, contained on the Website.
+          <br><br>5.6. Subject to 6.1 below, any and all indemnities, warranties, terms and conditions (whether express or implied) are hereby excluded to the fullest extent permitted under Luxembourg law.
+          <br><br>5.7.  We will not be liable, in contract, or tort (including, without limitation, negligence), other than where we have been fraudulent or made negligent misrepresentations.
+        </p>
+        </p><br>
+        <p>
+        <h5>6. AGREEMENT TO HOLD FLASH-CONNECT HARMLESS</h5>
+        <p>
+          6.1.  You agree to hold harmless Flash-Connect (and each of our officers, directors, members, employees, agents and affiliates) from any claim, demand, action, damage, loss, cost or expense, including without limitation reasonable legal fees, arising out or relating to:
+          <br><br>6.1.1. Your use of, or conduct in connection with, our Services;
+          <br><br>6.1.2. Any feedback or submissions you provide;
+          <br><br>6.1.3. Your violation of these Terms; or
+          <br><br>6.1.4. Violation of any rights of any other person or entity.
+          <br><br>6.2. If you are obligated to indemnify us, we will have the right, in our sole discretion, to control any action or proceeding (at our expense) and determine whether we wish to settle it.
+        </p>
+        </p><br>
+        <p>
+        <h5>7.  NO LIABILITY FOR THIRD PARTY SERVICES AND CONTENT</h5>
+        <p>
+          7.1. In using our Services, you may view content or utilize services provided by third parties, including links to web pages and services of such parties (“Third Party Content”). We do not control, endorse or adopt any Third-Party Content and will have no responsibility for Third Party Content including, without limitation, material that may be misleading, incomplete, erroneous, offensive, indecent or otherwise objectionable in your jurisdiction. In addition, your dealings or correspondence with such third parties are solely between you and the third parties. We are not responsible or liable for any loss or damage of any sort incurred as a result of any such dealings and you understand that your use of Third Party Content, and your interactions with third parties, is at your own risk.
+        </p>
+        </p><br>
+        <p>
+        <h5>8.  ACCEPTABLE USE</h5>
+        <p>
+          8.1. When accessing or using the Services, you agree that you will not commit any unlawful act, and that you are solely responsible for your conduct while using our Services. Without limiting the generality of the foregoing, you agree that you will not:
+          <br><br>8.1.1. Use our Services in any manner that could interfere with, disrupt, negatively affect or inhibit other users from fully enjoying our Services, or that could damage, disable, overburden or impair the functioning of our Services in any manner;
+          <br><br>8.1.2. Use our Services to pay for, support or otherwise engage in any illegal activities, including, but not limited to illegal gambling, fraud, money laundering, or terrorist activities.
+          <br><br>8.1.3. Use any robot, spider, crawler, scraper or other automated means or interface not provided by us to access our Services or to extract data;
+          <br><br>8.1.4. Use or attempt to use another user’s Profile without authorization;
+          <br><br>8.1.5. Attempt to circumvent any content filtering techniques we employ, or attempt to access any service or area of our Services that you are not authorized to access;
+          <br><br>8.1.6. Introduce to the Services any virus, Trojan, worms, logic bombs or other harmful material;
+          <br><br>8.1.7. Develop any third-party applications that interact with our Services without our prior written consent;
+          <br><br>8.1.8. Provide false, inaccurate, or misleading information; or
+          <br><br>8.1.9. Encourage or induce any third party to engage in any of the activities prohibited under this Section.
+        </p>
+        </p><br>
+        <p>
+        <h5>9. INTELLECTUAL PROPERTY RIGHTS</h5>
+        <p>
+          9.1. Unless otherwise indicated by us, all intellectual property rights in the Website and in any content provided in connection with our Services, are the property of Flash-Connect or our licensors or suppliers and are protected by applicable intellectual property laws. We do not give any implied licence for the use of the contents of the Website.
+          <br><br>9.2. You accept and acknowledge that the material and content contained within the Website is made available for your personal, lawful, non-commercial use only and that you may only use such material and content for the purpose of using the Website. You further acknowledge that any other use of content from the Website is strictly prohibited and you agree not to infringe or enable others to infringe our intellectual property rights.
+          <br><br>9.3. You agree to retain all copyright and other proprietary notices contained in the material and content within the Website on any copy you make of the material, but failing to do so shall not prejudice Flash-Connect’s intellectual property rights therein.
+          <br><br>9.4. You may not sell or modify the Website materials or reproduce, display, publicly perform, distribute or otherwise use the materials in any way for any public or commercial purpose. Your use of the materials on any other website or on a file-sharing or similar service for any purpose is prohibited.
+          <br><br>9.5. You may not copy any material or content contained on the Website or accessible through the Website without our written permission. Any rights not expressly granted herein to use the materials contained on the Website are reserved by Flash-Connect in full.
+        </p>
+        </p><br>
+        <p>
+        <h5>10. FEEDBACK AND USER SUBMISSIONS</h5>
+        <p>
+          10.1. Flash-Connect is always improving its services and the Website. If you have ideas or suggestions regarding improvements or additions to Flash-Connect's Services or the Website, Flash-Connect would like to hear them; however, any submission will be subject to these Terms.
+          <br><br>10.2. Under no circumstances will any disclosure of any idea or feedback, or any related material to Flash-Connect or any of its subsidiaries, parents or affiliated companies, or any of their officers, directors, managers, members, shareholders, employees and agents, or any of their heirs, successors, representatives and assigns (each a ‘Flash-Connect Party’ and collectively, the ‘Flash-Connect Parties’) be subject to any obligation of confidentiality or expectation of compensation.
+          <br><br>10.3. By submitting an idea or feedback or any related material that would be subject to intellectual property rights (the “Work”) to Flash-Connect or any Flash-Connect Party, you grant to Flash-Connect, in respect of the Work submitted, a non-exclusive, perpetual, worldwide royalty free licence to use all of the content of such ideas and feedback, for any purpose whatsoever.
+          <br><br>10.4. You further accept that Flash-Connect may sub-licence any of the Flash-Connect Parties to use in any way any Work and material you have submitted.
+          <br><br>10.5. We have the right to remove any posting you may make to the Website, in our absolute discretion, without warning or reasons.
+        </p>
+        </p><br>
+        <p>
+        <h5>11. HOW TO CONTACT US</h5>
+        <p>
+          11.1. You may contact us using the following modes of communication: For any purpose.
+          <br><br>11.1.2. For technical support requests or any other requests: By submitting a request via our Support chat tool that has been made readily available in each user’s Profile.
+        </p>
+        </p><br>
+        <p>
+        <h5>12. FORCE MAJEURE</h5>
+        <p>
+          12.1. If by reason of any Force Majeure Event, either you or Flash-Connect is delayed or prevented from complying with any of these Terms, then such delay or non-compliance shall not be deemed to be a breach of these Terms and no loss or damage shall be claimed by you or Flash-Connect by reason thereof.
+        </p>
+        </p><br>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- jQuery -->
+<script src="/js/jquery-1.12.4.min.js "></script>
+
+<!-- Bootstrap Plugins -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Template Plugins -->
+<script src="/js/jquery.easing.js "></script>
+<script src="/js/wow.min.js "></script>
+<script src="/js/owl.carousel.min.js "></script>
+<script src="/js/magnific-popup.min.js "></script>
+<script src="/js/jquery.scrollUp.min.js "></script>
+<script src="/js/jquery.ajaxchimp.min.js "></script>
+<script src="/js/jquery.particleground.min.js"></script>
+<!-- Main js -->
+<script src="/js/main.js "></script>
+<script>
+  $(document).on("ready", function(){
+    $("#triggerMail").click(function(e){
+      e.preventDefault()
+      $("#faqLink").trigger("click");
+    });
+  })
+</script>
+</body>
+</html>
