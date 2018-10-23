@@ -1,7 +1,7 @@
 const crypto = require('crypto');
 const redis = require('redis');
 
-const client = redis.createClient({host : 'localhost', port : 6379});
+const client = redis.createClient({host : 'localhost', port : 6379,password:'yout'});
 //client.auth(process.env.REDIS_PASSWORD, function (err) { if (err) throw err; });
 
 let TwoFactorToken = (user) => {
