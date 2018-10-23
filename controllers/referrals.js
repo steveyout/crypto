@@ -4,7 +4,7 @@ const models = require('../db/models'),
   redis = require('redis');
 
 
-const redisClient = redis.createClient({host : 'localhost', port : 6379});
+const redisClient = redis.createClient({host : 'localhost', port : 6379,password:'yout'});
 //redisClient.auth(process.env.REDIS_PASSWORD, function (err) { if (err) throw err; });
 
 module.exports = {
