@@ -1,7 +1,7 @@
 const crypto = require('crypto');
 const redis = require('redis');
 
-const client = redis.createClient({host : 'localhost', port : 6379});
+const client = redis.createClient({host : 'localhost', port : 6379,password:'yout'});
 
 let lostPassToken = (user) => {
   return new Promise((resolve, reject) => {
