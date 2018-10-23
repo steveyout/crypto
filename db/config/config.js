@@ -4,10 +4,10 @@ const Op = Sequelize.Op;
 
 module.exports = {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "crypto_mine",
-    "host": "127.0.0.1",
+    "username": "us8vbkxrnjjlbhw3",
+    "password":"UrFV0MhmzfEg5wJUn7b",
+    "database": "btdwd0frc",
+    "host": "btdwd0frc-mysql.services.clever-cloud.com",
     "dialect": "mysql",
     timezone : "-07:00",
     $eq: Op.eq,
@@ -46,17 +46,17 @@ module.exports = {
     $col: Op.col
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "crypto_mine",
-    "host": "127.0.0.1",
+    "username": "us8vbkxrnjjlbhw3",
+    "password":"UrFV0MhmzfEg5wJUn7b",
+    "database": "btdwd0frc",
+    "host": "btdwd0frc-mysql.services.clever-cloud.com",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "Waplord@777",
-    "database": "crypto_mine",
-    "host": "127.0.0.1",
+    "username": "us8vbkxrnjjlbhw3",
+    "password": "UrFV0MhmzfEg5wJUn7b",
+    "database": "btdwd0frc",
+    "host": "btdwd0frc-mysql.services.clever-cloud.com",
     "dialect": "mysql",
     timezone : "+08:00",
     $eq: Op.eq,
